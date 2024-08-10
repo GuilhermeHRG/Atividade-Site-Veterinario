@@ -1,0 +1,77 @@
+#form_contato {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 550px;
+  padding: 25px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+#form_contato:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contato {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.contato label {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.contato input {
+  width: 100%;
+  padding: 12px 15px 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.contato input:focus {
+  border-color: #3498db;
+  background-color: #fff;
+  outline: none;
+}
+
+.contato input:focus + label,
+.contato input:not(:placeholder-shown) + label {
+  top: 0;
+  left: 10px;
+  font-size: 0.75em;
+  color: #3498db;
+}
+
+.contato input::placeholder {
+  color: transparent;
+}
+
+button {
+  width: 100%;
+  padding: 12px 20px;
+  border: none;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 1.1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}

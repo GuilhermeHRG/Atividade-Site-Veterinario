@@ -1,0 +1,140 @@
+/* Reset CSS básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff; /* Fundo branco */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container principal */
+.app-container {
+  max-width: 1200px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagem de topo */
+.topo-imagem {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 30px;
+}
+
+/* Estilização dos cartões */
+.cartoes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.cartao {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cartao:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cartao img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.cartao h3 {
+  font-size: 1.5em;
+  margin: 20px;
+  color: #333;
+  font-weight: 600;
+}
+
+.cartao p {
+  font-size: 1em;
+  margin: 0 20px 20px;
+  color: #666;
+}
+
+/* Estilização do formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px; /* Largura máxima para centralizar */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="email"] {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-color: #333;
+  outline: none;
+}
+
+textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  width: 100%;
+  resize: vertical;
+  height: 150px;
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #333;
+  outline: none;
+}
+
+button {
+  padding: 12px 15px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 15px;
+  }
+
+  .cartoes-container {
+    grid-template-columns: 1fr;
+  }
+}
